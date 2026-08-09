@@ -16,7 +16,6 @@ export function HomePage() {
   const trust = home.trust[locale];
   const stats = home.stats[locale];
   const crisis = home.crisis[locale];
-  const gap = home.gap[locale];
   const programs = home.programs[locale];
   const why = home.why[locale];
   const solve = home.solve[locale];
@@ -101,42 +100,6 @@ export function HomePage() {
           <Reveal delay={0.12}>
             <CrisisMap className="h-auto w-full" />
           </Reveal>
-        </div>
-      </section>
-
-      {/* Competitor gap */}
-      <section className="section-pad bg-paper py-20 md:py-28">
-        <div className="container-shell">
-          <Reveal>
-            <SectionHeading title={gap.title} />
-          </Reveal>
-          <div className="mt-10 overflow-x-auto">
-            <table className="w-full min-w-[720px] text-left text-sm">
-              <thead>
-                <tr className="border-b border-[var(--line)] text-steel">
-                  <th className="py-3 pr-4 font-semibold">
-                    {locale === "en" ? "Provider" : "Penyedia"}
-                  </th>
-                  <th className="py-3 pr-4 font-semibold">
-                    {locale === "en" ? "Current Focus" : "Fokus Mereka"}
-                  </th>
-                  <th className="py-3 font-semibold">
-                    {locale === "en" ? "The Gap We Fill" : "Celah yang Kami Isi"}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {gap.rows.map((row) => (
-                  <tr key={row.provider} className="border-b border-[var(--line)] align-top">
-                    <td className="py-4 pr-4 font-semibold text-ink">{row.provider}</td>
-                    <td className="py-4 pr-4 text-ink-soft">{row.focus}</td>
-                    <td className="py-4 text-ink-soft">{row.gap}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-8 max-w-3xl font-display text-xl text-ink">{gap.common}</p>
         </div>
       </section>
 
