@@ -62,10 +62,6 @@ export const content = {
         ctaSecondary: "Pesan Workshop Pilot 60 Menit Gratis",
       },
     },
-    trust: {
-      en: ["Job Guarantee Option", "Income Share Agreements", "800+ Hiring Partners"],
-      id: ["Opsi Jaminan Kerja", "Income Share Agreement", "800+ Mitra Perekrutan"],
-    },
     stats: {
       en: [
         { value: "18+", label: "Years Production Experience" },

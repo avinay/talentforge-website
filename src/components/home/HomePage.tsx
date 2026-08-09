@@ -13,7 +13,6 @@ export function HomePage() {
   const { locale } = useLocale();
   const home = content.home;
   const hero = home.hero[locale];
-  const trust = home.trust[locale];
   const stats = home.stats[locale];
   const crisis = home.crisis[locale];
   const programs = home.programs[locale];
@@ -58,18 +57,10 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Trust + Stats */}
+      {/* Stats */}
       <section className="section-pad border-b border-[var(--line)] bg-paper py-8">
         <div className="container-shell">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-sm font-medium text-ink-soft">
-            {trust.map((item) => (
-              <span key={item} className="inline-flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-sm bg-ember" />
-                {item}
-              </span>
-            ))}
-          </div>
-          <div className="mt-8 grid gap-6 border-t border-[var(--line)] pt-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="font-display text-3xl text-ember md:text-4xl">{stat.value}</p>
